@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@reference "tailwindcss";
+
+body {
+  @apply bg-gray-50;
+}
+
+.text-burgundy-600 {
+  color: #070707;
+}
+.text-gold-600 {
+  color: #D4AF37;
+}
+.bg-burgundy-600 {
+  background-color: #0d0c0c;
+}
+.bg-gold-600 {
+  background-color: #D4AF37;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
