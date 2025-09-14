@@ -100,24 +100,18 @@ export default function Search() {
             }
 
             if (type === "user") {
-              return (
-                <Link
-                  to={`/user/${item.username}`}
-                  key={item._id}
-                  className="flex-none w-32 bg-white rounded-lg shadow hover:shadow-lg transition flex flex-col items-center p-2 gap-1"
-                >
-                  <img
-                    src={
-                      item.profilePhoto ||
-                      "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=100"
-                    }
-                    alt={item.username}
-                    className="w-16 h-16 rounded-full object-cover"
-                  />
-                  <h3 className="text-sm font-semibold truncate">{item.username}</h3>
-                </Link>
-              );
-            }
+  return (
+    <Link
+      to={`/user/${item.username}`}
+      key={item._id}
+      className="flex-none w-32 bg-white rounded-lg shadow hover:shadow-lg transition flex flex-col items-center p-2"
+    >
+      <h3 className="text-sm font-semibold truncate">{item.username}</h3>
+      <p className="text-xs text-gray-500">{item.email}</p>
+    </Link>
+  );
+}
+
 
             return null;
           })}
